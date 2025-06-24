@@ -1,0 +1,132 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+background: linear-gradient(135deg, #ff3c78, #9c27b0, #ff5722);
+
+    font-family: 'Baloo 2', cursive;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 40px 60px;
+    box-shadow: 0 0 40px rgba(255, 192, 203, 0.8);
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #ff3c78;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #ffd1dc;
+    margin-bottom: 30px;
+}
+
+button {
+    background: #ff3c78;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 6px 15px rgba(255, 60, 120, 0.6);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e63268;
+}
+
+/* Animación de texto */
+@keyframes pulse {
+    0%, 100% {
+    text-shadow:
+        0 0 8px #ff3c78,
+        0 0 20px #ff3c78,
+        0 0 30px #ff3c78,
+        0 0 40px #ff3c78,
+        0 0 50px #ff3c78,
+        0 0 60px #ff3c78,
+        0 0 70px #ff3c78;
+    }
+    50% {
+    text-shadow:
+        0 0 12px #ff85a2,
+        0 0 25px #ff85a2,
+        0 0 35px #ff85a2,
+        0 0 45px #ff85a2,
+        0 0 55px #ff85a2,
+        0 0 65px #ff85a2,
+        0 0 75px #ff85a2;
+    }
+}
+
+/* Confeti */
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    top: 0;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    opacity: 0.8;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@keyframes fall {
+    0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    }
+    100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+    }
+}
+
+/* Luz de neón parpadeante para el botón */
+button {
+    box-shadow: 0 0 10px #ff3c78, 0 0 20px #ff3c78, 0 0 30px #ff3c78;
+}
+
+button:active {
+    box-shadow: 0 0 5px #e63268, 0 0 10px #e63268, 0 0 15px #e63268;
+}
+
+/* Mensaje extra debajo del botón, oculto por defecto */
+#mensajeExtra {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ff3c78;
+    font-weight: 700;
+    display: none;
+}
