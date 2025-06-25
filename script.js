@@ -26,7 +26,7 @@ function crearConfeti() {
 }
 
 document.getElementById('btnConfetti').addEventListener('click', () => {
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 200; i++) {
     setTimeout(crearConfeti, i * 10);
     }
 
